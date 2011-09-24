@@ -1,0 +1,206 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B82C3697142CC6A00062C989 /* Matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = B82C3696142CC6A00062C989 /* Matrix.c */; };
+		B87B1561142C78B20070D39C /* Mathematics.c in Sources */ = {isa = PBXBuildFile; fileRef = B87B1560142C78B20070D39C /* Mathematics.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B82C3696142CC6A00062C989 /* Matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Matrix.c; sourceTree = "<group>"; };
+		B84EDC86142C759E00B970A3 /* libOpen C Library.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libOpen C Library.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B87B1560142C78B20070D39C /* Mathematics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mathematics.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B84EDC83142C759E00B970A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B84EDC7B142C759E00B970A3 = {
+			isa = PBXGroup;
+			children = (
+				B87B1563142C78C80070D39C /* Source */,
+				B84EDC87142C759E00B970A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B84EDC87142C759E00B970A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B84EDC86142C759E00B970A3 /* libOpen C Library.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B87B1563142C78C80070D39C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B87B1560142C78B20070D39C /* Mathematics.c */,
+				B82C3696142CC6A00062C989 /* Matrix.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B84EDC84142C759E00B970A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B84EDC85142C759E00B970A3 /* Open C Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B84EDC8A142C759E00B970A3 /* Build configuration list for PBXNativeTarget "Open C Library" */;
+			buildPhases = (
+				B84EDC82142C759E00B970A3 /* Sources */,
+				B84EDC83142C759E00B970A3 /* Frameworks */,
+				B84EDC84142C759E00B970A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Open C Library";
+			productName = "Open C Library";
+			productReference = B84EDC86142C759E00B970A3 /* libOpen C Library.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B84EDC7D142C759E00B970A3 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B84EDC80142C759E00B970A3 /* Build configuration list for PBXProject "Open C Library" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B84EDC7B142C759E00B970A3;
+			productRefGroup = B84EDC87142C759E00B970A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B84EDC85142C759E00B970A3 /* Open C Library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B84EDC82142C759E00B970A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B87B1561142C78B20070D39C /* Mathematics.c in Sources */,
+				B82C3697142CC6A00062C989 /* Matrix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B84EDC88142C759E00B970A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B84EDC89142C759E00B970A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B84EDC8B142C759E00B970A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B84EDC8C142C759E00B970A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B84EDC80142C759E00B970A3 /* Build configuration list for PBXProject "Open C Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84EDC88142C759E00B970A3 /* Debug */,
+				B84EDC89142C759E00B970A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B84EDC8A142C759E00B970A3 /* Build configuration list for PBXNativeTarget "Open C Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84EDC8B142C759E00B970A3 /* Debug */,
+				B84EDC8C142C759E00B970A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B84EDC7D142C759E00B970A3 /* Project object */;
+}
