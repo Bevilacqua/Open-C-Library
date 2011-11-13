@@ -6,22 +6,19 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
-
-int lcm2(int num1,int num2);
-int lcm2s(int num1,int num2);
-int lcm(int a[],int n);
-void divide(long dividend, long divisor, long decimalPlace);
 
 int lcm2(int num1,int num2) {
     int lcm = 1, i=2;
-    while (num1!=0||num2!=0) {
+    while (num1!=1||num2!=1) {
         if (num1%i==0||num2%i==0) {
             lcm *=i;
             if (num1%i==0)
                 num1 /= i;
-            else
+            if (num2%i==0)
                 num2 /= i;
+            
         }
         if (num1%i&&num2%i)
             i++;
@@ -49,21 +46,29 @@ int lcm(int a[],int n){
     return lcm;
 }
 
-void divide(long dividend, long divisor, long decimalPlace) {
+int countDigit(int n){
+    int count=0;
+    while (n) {
+        count++;
+        n/=10;
+    }
+}
+
+void printDivide(long dividend, long divisor, long decimalPlace) {
     long a,b,c,d;
     bool h=false;
     bool r=false;
     long f=1;
     while (dividend < divisor) {
-            if (!r) {
-                printf("0.");
-                h = r = true;
-            } else {
-                printf("0");
-                dividend = dividend * 10;
-                f++;
-            }
-        }    a = dividend / divisor;
+        if (!r) {
+            printf("0.");
+            h = r = true;
+        } else {
+            printf("0");
+            dividend = dividend * 10;
+            f++;
+        }
+    }    a = dividend / divisor;
     if (!h)
         printf("%ld.",a);
     else {
@@ -82,5 +87,55 @@ void divide(long dividend, long divisor, long decimalPlace) {
         printf("%ld",d);
         b = c % divisor;
         f++;
+    }
+}
+
+char *getDivide(long dividend, long divisor, unsigned long decimalPlace) {
+    long a,b,c,d;
+    bool h=false;
+    bool r=false;
+    long f=1;
+    char *s = malloc(decimalPlace+countDigit(dividend/divisor)+2);
+    while (dividend < divisor) {
+        if (!r) {
+            sprintf(s,"0.");
+            h = r = true;
+        } else {
+            sprintf(s,"0");
+            dividend = dividend * 10;
+            f++;
+        }
+    }    a = dividend / divisor;
+    if (!h)
+        sprintf(s,"%ld.",a);
+    else {
+        sprintf(s,"%ld",a);
+        f++;
+    }
+    b = dividend % divisor;
+    while (f <= decimalPlace) {
+        c = b * 10;
+        while((c < divisor) && (f < decimalPlace)) {
+            c = c * 10;
+            sprintf(s,"0");
+            f++;
+        }
+        d = c / divisor;
+        sprintf(s,"%ld",d);
+        b = c % divisor;
+        f++;
+    }
+    
+    return s;
+}
+
+int revnum(int n){
+    static int pow=1;
+    pow*=10;
+    if(n>=10){
+        return ((n%10)*pow/10)+revnum(n/10);
+    }
+    else{
+        return (n%10)*pow/10;
     }
 }

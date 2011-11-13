@@ -7,23 +7,14 @@
 
 #include <limits.h>
 
-void addMatrix(int A[][INT_MAX],int B[][INT_MAX], int Sum[][INT_MAX],int r, int c);
-void substractMatrix(int A[][INT_MAX],int B[][INT_MAX], int Diff[][INT_MAX],int r, int c);
-void multiplyMatrix(int A[][INT_MAX],int B[][INT_MAX], int Product[][INT_MAX],int r1, int c1, int r2);
-void transposeMatrix(int A[][INT_MAX],int r, int c);
-void mirrorMatrix(int A[][INT_MAX],int r, int c);
-void determinantMatrix(int A[][INT_MAX],int r, int c);
-
-void addMatrix(int A[][INT_MAX],int B[][INT_MAX], int Sum[][INT_MAX],int r, int c) {
-    for (int i=0; i<r; i++)
-        for (int j=0; j<c; j++)
-            Sum[i][j]=A[i][j]+B[i][j];
+void addMatrix(int *A,int *B, int *Sum,int r, int c) {
+    for (int i=0; i<r*c; i++)
+        Sum[i]=A[i]+B[i];
 }
 
-void substractMatrix(int A[][INT_MAX],int B[][INT_MAX], int Diff[][INT_MAX],int r, int c) {
-    for (int i=0; i<r; i++)
-        for (int j=0; j<c; j++)
-            Diff[i][j]=A[i][j]-B[i][j];
+void substractMatrix(int*A,int *B, int *Diff,int r, int c) {
+    for (int i=0; i<r*c; i++)
+        Diff[i]=A[i]-B[i];
 }
 
 void multiplyMatrix(int A[][INT_MAX],int B[][INT_MAX], int Product[][INT_MAX],int r1, int c1, int c2) {
@@ -33,22 +24,19 @@ void multiplyMatrix(int A[][INT_MAX],int B[][INT_MAX], int Product[][INT_MAX],in
                 Product[i][j]=A[i][k]-B[k][j];
 }
 
-void transposeMatrix(int A[][INT_MAX],int r, int c) {
-    int temp;
+int *transposeMatrix(int A[][INT_MAX],int r, int c) {
+    int T[c][r];
     for (int i=0; i<r; i++)
-        for (int j=0; j<c; j++){
-            temp = A[i][j];
-            A[i][j]=A[j][i];
-            A[j][i]=temp;
-        }
+        for (int j=0; j<c; j++)
+            T[j][i] = A[i][j];
+    return T;
 }
 
-void determinantMatrix(int A[][INT_MAX],int r, int c) {
-    int temp;
-    for (int i=0; i<r; i++)
-        for (int j=0; j<c/2; j++){
-            temp = A[i][j];
-            A[i][j]=A[i][c-1-j];
-            A[i][c-1-j]=temp;
-        }
+int *cofactor(int A[][INT_MAX],int i, int j){
+    
 }
+
+long determinantMatrix(int A[][INT_MAX],int s) {
+    return 0;
+}
+
