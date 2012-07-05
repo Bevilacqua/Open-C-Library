@@ -15,5 +15,6 @@ int lcm(int a[],int n);
 void printDivide(long dividend, long divisor, long decimalPlace);
 char *getDivide(long dividend, long divisor, unsigned long decimalPlace);
 int revnum(int n);
+int CountDigits(int num);
 
 #endif
