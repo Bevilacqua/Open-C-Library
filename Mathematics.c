@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "Mathematics.h"
 
 int lcm2(int num1,int num2) {
     int lcm = 1, i=2;
@@ -131,13 +132,11 @@ char *getDivide(long dividend, long divisor, unsigned long decimalPlace) {
     return s;
 }
 
-int revnum(int n){
-    static int pow=1;
-    pow*=10;
-    if(n>=10){
-        return ((n%10)*pow/10)+revnum(n/10);
+int revnum(int n) {
+    int rev = 0;
+    while (n) {
+        rev = (rev*10) + (n%10);
+        n/=10;
     }
-    else{
-        return (n%10)*pow/10;
-    }
+    return rev;
 }

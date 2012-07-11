@@ -21,15 +21,14 @@ void lcm2sTEST(void){
 }
 
 void getDivideTEST(void){
+    //printf("%f\n",getDivide(22, 7, 14));
     //assert(getDivide(22, 7, 14)=="3.14285714285714");
 }
 
 void revnumTEST(void){
-    printf("%d\n",revnum(542284));
-    printf("%d\n",revnum(1024));
-    //assert(revnum(1024)==4201);
-    //assert(revnum(1020)==201);
-    //assert(revnum(1200)==21);
+    assert(revnum(1024)==4201);
+    assert(revnum(1020)==201);
+    assert(revnum(1200)==21);
 }
 
 void MathematicsTEST(void){

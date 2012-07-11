@@ -11,6 +11,7 @@
 
 void lcm2TEST(void);
 void lcm2sTEST(void);
+void getDivideTEST(void);
 void revnumTEST(void);
 void MathematicsTEST(void);
 
