@@ -46,12 +46,14 @@ int lcm(int a[],int n){
     return lcm;
 }
 
-int countDigit(int n){
-    int count=0;
-    while (n) {
-        count++;
+
+int countDigits(long int n) {
+    int digit = 0;
+    while(n){
+        digit++;
         n/=10;
     }
+    return digit;
 }
 
 void printDivide(long dividend, long divisor, long decimalPlace) {
@@ -95,7 +97,7 @@ char *getDivide(long dividend, long divisor, unsigned long decimalPlace) {
     bool h=false;
     bool r=false;
     long f=1;
-    char *s = malloc(decimalPlace+countDigit(dividend/divisor)+2);
+    char *s = malloc(decimalPlace+countDigits(dividend/divisor)+2);
     while (dividend < divisor) {
         if (!r) {
             sprintf(s,"0.");
@@ -138,33 +140,4 @@ int revnum(int n){
     else{
         return (n%10)*pow/10;
     }
-}
-
-int CountDigits(int num) {
-    if (num <10 || num >-10) 
-        return(1);
-    
-    else if (num <100 || num >-100)
-        return(2);
-    
-    else if (num <1000 || num >-1000)
-        return(3);
-        
-    else if (num <10000 || num >-10000)
-        return(4);
-        
-    else if (num <100000 || num >-100000)
-        return(5);
-        
-    else if (num <1000000 || num >-1000000)
-        return(6);
-        
-    else if (num <10000000 || num >-10000000)
-        return(7);
-        
-    else if (num <100000000 || num >-100000000)
-        return(8);
-//If needed add additional else-ifs in same format        
-    else
-        return (1111111) //Denotes the error (Overflow)
 }
