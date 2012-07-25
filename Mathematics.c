@@ -1,4 +1,4 @@
-//
+000//
 //  Mathematics.c
 //  Open C Library
 //
@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 #include "Mathematics.h"
 
 int lcm2(int num1,int num2) {
@@ -139,4 +140,22 @@ int revnum(int n) {
         n/=10;
     }
     return rev;
+}
+
+//This is a WIP COnverts a Hexadecimal into a decimal
+int HEX2DEC(int number) {
+    int power=0,r1,r2,r3,final;
+    int A = number / 100;
+    int B = (number % 100) / 10;
+    int C = (number % 100) % 10;
+    /*DEBUG PURPOUSES:printf("%d , %d , %d\n",A,B,C); */
+    
+    r1 = C * 1;
+    r2 = B * 16;
+    r3 = A * 256;
+    //TODO: take r4 and D so i can have 4 digit hexs
+    final = r1 + r2 + r3;
+    
+    /*DEBUG PURPOUSES:printf("0x%03d = %d in decimal!",number,final);*/
+    return final;
 }

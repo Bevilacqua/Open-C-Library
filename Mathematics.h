@@ -16,5 +16,6 @@ void printDivide(long dividend, long divisor, long decimalPlace);
 char *getDivide(long dividend, long divisor, unsigned long decimalPlace);
 int revnum(int n);
 int countDigits(long int num);
+int HEX2DEC(int number);
 
 #endif
