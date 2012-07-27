@@ -166,3 +166,10 @@ float interestCompound(float c,float r,float n,float time) {
     p = pow((1.0 + (r/n)),ex);
     return p *= c;
 }
+float interestContinuous(float c,float r,float time) { //Accurate to about 10 decimal places
+    double EC = 2.718281828469;
+    float p=0.0; //is the future value (return value)
+    float ex = r*time;
+    return p = c * (pow((double)EC,ex));
+}
+

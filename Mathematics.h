@@ -8,7 +8,7 @@
 
 #ifndef Open_C_Library_Mathematics_h
 #define Open_C_Library_Mathematics_h
-
+double EC = 2.718281828469; //Euler's Number/ e constant
 int lcm2(int num1,int num2);
 int lcm2s(int num1,int num2);
 int lcm(int a[],int n);
@@ -17,6 +17,7 @@ char *getDivide(long dividend, long divisor, unsigned long decimalPlace);
 int revnum(int n);
 int countDigits(long int num);
 int hexConvertdec(int number);
-float interestCompound(float c,float r,float n,float time)
+float interestCompound(float c,float r,float n,float time);
+float interestContinuous(float c,float r,float time);
 
 #endif
