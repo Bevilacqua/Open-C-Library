@@ -1,4 +1,4 @@
-000//
+//
 //  Mathematics.c
 //  Open C Library
 //
@@ -142,8 +142,8 @@ int revnum(int n) {
     return rev;
 }
 
-//This is a WIP COnverts a Hexadecimal into a decimal
-int HEX2DEC(int number) {
+//This is a WIP Converts a Hexadecimal into a decimal
+int hexConvertdec(int number) {
     int power=0,r1,r2,r3,final;
     int A = number / 100;
     int B = (number % 100) / 10;
@@ -158,4 +158,11 @@ int HEX2DEC(int number) {
     
     /*DEBUG PURPOUSES:printf("0x%03d = %d in decimal!",number,final);*/
     return final;
+}
+float interestCompound(float c,float r,float n,float time) {
+    float p=0.0; //is the future value (return value)
+    float ex = n*time; 
+    
+    p = pow((1.0 + (r/n)),ex);
+    return p *= c;
 }
